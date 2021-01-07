@@ -4,7 +4,7 @@ Fonts
 ===============
 */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
-
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 /*
 =============== 
 Variables
@@ -18,10 +18,9 @@ Variables
   --clr-primary-3: hsl(43, 72%, 37%);
   --clr-primary-4: hsl(42, 63%, 48%);
   /* primary/main color */
-  --clr-primary-5: hsla(150, 56%, 53%, 0.719);
+  --clr-primary-5: hsl(43, 90%, 76%);
   /* lighter shades of primary color */
   --clr-primary-6: hsl(150, 72%, 83%);
-  --clr-primary-7: hsl(43, 90%, 76%);
   --clr-primary-10: hsla(129, 73%, 87%, 0.377);
   /* darkest grey - used for headings */
   --clr-grey-1: hsl(209, 61%, 16%);
@@ -36,7 +35,7 @@ Variables
   --clr-grey-9: hsl(212, 33%, 89%);
   --clr-grey-10: hsl(210, 36%, 96%);
   --clr-white: #fff;
-  --ff-primary: "Roboto", sans-serif;
+  --ff-primary: 'Poppins', sans-serif;
   --ff-secondary: "Open Sans", sans-serif;
   --transition: all 0.3s linear;
   --spacing: 0.20rem;
@@ -131,7 +130,7 @@ p {
   text-transform: uppercase;
   background: var(--clr-primary-5);
   color: var(--clr-white);
-  padding: 0.375rem 0.75rem;
+  padding: 0.56rem 0.95rem;
   letter-spacing: var(--spacing);
   display: inline-block;
   font-weight: 700;
@@ -146,6 +145,7 @@ p {
 .btn:hover {
   color: var(--clr-primary-1);
   background: var(--clr-primary-7);
+   transform: scale(0.99) translateY(-10px);
 }
 /* section */
 .section {
@@ -245,9 +245,6 @@ Navbar
   justify-self: end;
 }
 @media screen and (min-width: 768px) {
-  .nav {
-    background: var(--clr-primary-10);
-  }
   .nav-btn {
     display: none;
   }
@@ -262,7 +259,7 @@ Navbar
   }
   .nav-links a {
     text-transform: capitalize;
-    color: var(--clr-grey-1);
+    color: var(--clr-white);
     font-weight: bold;
     letter-spacing: var(--spacing);
     -webkit-transition: var(--transition);
@@ -369,6 +366,14 @@ Hero
 ===============
 */
 /* underline added to globals */
+.hero {
+    background-image: linear-gradient(to right, #021924c9,#031822c9), url('../images/project-1.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+     
+}
 .hero .underline {
   margin-bottom: 0.5rem;
   margin-left: 0;
@@ -376,19 +381,28 @@ Hero
 .hero-img {
   display: none;
 }
-.hero {
-  background: var(--clr-primary-10);
-}
+
 .hero-center {
   min-height: calc(100vh - 7rem);
   display: grid;
-  place-items: center;
+}
+.hero-info {
+   padding: 3.5rem 0px 0px 3rem;
+}
+.hero-info h1 {
+  font-size: 4em;
+  font-weight: 800;
+  line-height: 1em;
+  text-transform: uppercase;
+  color: var(--clr-white);
 }
 .hero-info h4 {
+  font-size: 1.3em;
+  font-weight: 500;
+  max-width: 700px;
   line-height: 1.55;
-  letter-spacing: .22rem;
-  font-size: 1rem;
-  color: var(--clr-grey-4);
+  letter-spacing: .20rem;
+  color: var(--clr-white);
 }
 .hero-icons {
   justify-items: start;
@@ -402,7 +416,7 @@ Hero
     position: relative;
   }
   .hero-center {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 
   .hero-img::before,
