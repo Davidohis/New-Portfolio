@@ -16,6 +16,7 @@ Variables
   --clr-primary-1: hsl(42, 63%, 48%);
   /* lighter shades of primary color */
   --clr-primary-2: hsl(42, 89%, 63%);
+  --clr-primary-3:  hsla(200, 43%, 4%, 0.966);
   /* darkest grey - used for headings */
   --clr-grey-1: hsl(209, 61%, 16%);
   --clr-grey-2: hsl(211, 39%, 23%);
@@ -53,7 +54,7 @@ Global Styles
 }
 body {
   font-family: var(--ff-secondary);
-  background: var(--clr-white);
+  background: var(--clr-grey-10);
   color: var(--clr-grey-1);
   line-height: 1.5;
   font-size: 0.875rem;
@@ -139,7 +140,7 @@ p {
 .btn:hover {
   color: var(--clr-primary-1);
   background: var(--clr-primary-7);
-   transform: scale(0.99) translateY(-10px);
+  transform: scale(0.99) translateY(-10px);
 }
 /* section */
 .section {
@@ -240,7 +241,7 @@ Navbar
 }
 @media screen and (min-width: 768px) {
 .nav {
-    background-color: #000102;
+    background-color: var(--clr-primary-3);
 }
   .nav-btn {
     display: none;
@@ -335,7 +336,7 @@ Sidebar
 }
 .social-icon {
   font-size: 1.5rem;
-  color: var(--clr-grey-1);
+  color: var(--clr-white);
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
@@ -364,7 +365,7 @@ Hero
 */
 /* underline added to globals */
 .hero {
-    background-image: linear-gradient(to right, #000102,#000102);
+    background-image: linear-gradient(to right, var(--clr-primary-3),var(--clr-primary-3));
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -487,18 +488,20 @@ Projects btn
   background: transparent;
   border-color: var(--clr-primary-1);
   font-size: 1rem;
+  font-weight: 500;
   text-transform: capitalize;
   margin: 0 0.5rem;
   letter-spacing: 1px;
   border-radius: var(--radius);
-  padding: 0.375rem 0.75rem;
+  padding: 0.56rem 0.85rem;
   color: var(--clr-gold);
   cursor: pointer;
   transition: var(--transition);
+  display: inline-block;
 }
 .filter-btn:hover {
   background: var(--clr-primary-1);
-  color: var(--clr-white);
+  transform: scale(0.99) translateY(-2px);
 }
 
 /*===============*/
@@ -744,8 +747,8 @@ Products Page
 ===============
 */
 .projects-hero {
-  height: 40vh;
-  background: var(--clr-primary-10);
+  height: 30vh;
+  background: var(--clr-grey-10);
   display: grid;
   place-items: center;
 }
@@ -774,9 +777,9 @@ Products Page
   height: 4rem;
   display: grid;
   place-items: center;
-  background: var(--clr-primary-7);
+  background: var(--clr-primary-2);
   border-radius: 50%;
-  color: var(--clr-primary-2);
+  color: var(--clr-primary-3);
   border: 0.375rem solid var(--clr-grey-10);
 }
 .project-details {
@@ -785,10 +788,10 @@ Products Page
 .project-footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  color: var(--clr-primary-4);
+  color: var(--clr-grey-1);
 }
 .project-footer a {
-  color: var(--clr-primary-4);
+  color: var(--clr-grey-1);
   text-transform: capitalize;
   -webkit-transition: var(--transition);
   transition: var(--transition);
